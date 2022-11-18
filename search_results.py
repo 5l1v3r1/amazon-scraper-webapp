@@ -14,8 +14,6 @@ def scrape_search_page(url):
 
     soup = BeautifulSoup(page.content , "html.parser")
 
-    soup1 = BeautifulSoup(soup.prettify(), "lxml")
-
     links = soup.find_all("a", attrs={'class':'a-link-normal s-no-outline'})    
 
     for link in links:
